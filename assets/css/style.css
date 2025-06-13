@@ -15,6 +15,7 @@ body {
     font-family: "Sora", sans-serif;
 }
 
+/* Common */
 a {
     text-decoration: none;
 }
@@ -23,6 +24,27 @@ a {
     width: 1170px;
     max-width: calc(100% - 48px);
     margin: 0 auto;
+}
+
+.btn {
+    --height:60px;
+    display: inline-block;
+    min-width: 205px;
+    color: #fff;
+    padding: 0 20px;
+    background: #2E80CE;
+    border: 1px solid #2E80CE;
+    height:var(--height);
+    line-height:var(--height);
+    border-radius: 99px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
 }
 
 /* Header */
@@ -77,4 +99,45 @@ a {
     font-size: 1.2em;
     font-weight: 300;
     text-align: right;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.action__login,
+.navbar__link {
+    padding: 4px 21px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #C9D2DA;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    color: #fff;
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__link--active::before {
+    position: relative;
+    top: -2px;
+    left: -8px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.action__singup {
+    --height:44px;
+    min-width: 104px;
 }
